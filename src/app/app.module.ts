@@ -3,6 +3,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms"; //NgModule lives here
 import { HttpClientModule } from "@angular/common/http";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
+import { InMemoryDataService } from "./in-memory-data.service";
 
 import { AppComponent } from "./app.component";
 import { HeroesComponent } from "./heroes/heroes.component";
@@ -14,7 +15,15 @@ import { AppRoutingModule } from "./app-routing.module";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
+      dataEncapsulation: false
+    })
+  ],
   declarations: [
     AppComponent,
     HeroesComponent,
@@ -23,6 +32,6 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
     DashboardComponent
   ],
   bootstrap: [AppComponent],
-  providers: [HeroService, MessageService]
+  providers: [HeroService, MessageService, InMemoryDataService]
 })
 export class AppModule {}
