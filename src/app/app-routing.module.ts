@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { AppComponent } from "./app.component";
+
 import { CrisisListComponent } from "./crisis-list/crisis-list.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { HeroDetailComponent } from "./heroes/hero-detail/hero-detail.component";
@@ -18,7 +18,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { enableTracing: true })],
-  exports: [RouterModule],
-  bootstrap: [AppComponent]
+  exports: [RouterModule]
 })
 export class AppRoutingModule {}
