@@ -6,8 +6,6 @@ import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { InMemoryDataService } from "./in-memory-data.service";
 
 import { AppComponent } from "./app.component";
-import { HeroDetailComponent } from "./hero-detail/hero-detail.component";
-import { HeroService } from "./hero.service";
 import { MessageService } from "./message.service";
 import { MessagesComponent } from "./messages/messages.component";
 import { AppRoutingModule } from "./app-routing.module";
@@ -16,6 +14,8 @@ import { HeroSearchComponent } from "./hero-search/hero-search.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { CrisisListComponent } from "./crisis-list/crisis-list.component";
 import { HeroListComponent } from "./heroes/heroes/hero-list.component";
+import { HeroDetailComponent } from "./heroes/hero-detail/hero-detail.component";
+import { HeroService } from "./heroes/hero.service";
 
 @NgModule({
   imports: [
