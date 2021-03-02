@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { MessageService } from "../message.service";
 
 @Component({
-  selector: 'app-page-not-found',
-  templateUrl: './page-not-found.component.html',
-  styleUrls: ['./page-not-found.component.css']
+  selector: "app-page-not-found",
+  templateUrl: "./page-not-found.component.html",
+  styleUrls: ["./page-not-found.component.css"]
 })
 export class PageNotFoundComponent implements OnInit {
-
-  constructor() { }
+  constructor(private messageService: MessageService) {}
 
   ngOnInit() {
+    this.messageService.add("Page not found!");
   }
-
 }
