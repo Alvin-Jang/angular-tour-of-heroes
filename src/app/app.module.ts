@@ -15,7 +15,7 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
 import { HeroSearchComponent } from "./hero-search/hero-search.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { CrisisListComponent } from "./crisis-list/crisis-list.component";
-import { HeroesComponent } from "./heroes/heroes/heroes.component";
+import { HeroListComponent } from "./heroes/heroes/hero-list.component";
 
 @NgModule({
   imports: [
@@ -35,7 +35,7 @@ import { HeroesComponent } from "./heroes/heroes/heroes.component";
   ],
   declarations: [
     AppComponent,
-    HeroesComponent,
+    HeroListComponent,
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
