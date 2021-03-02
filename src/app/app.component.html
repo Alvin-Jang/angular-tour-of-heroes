@@ -8,5 +8,7 @@
   &nbsp;
   <a routerLink="/sidekicks">Go to sidekicks</a>
 </nav>
-<router-outlet></router-outlet>
+<div [@routeAnimation]="getAnimationData(routerOutlet)">
+  <router-outlet #routerOutlet="outlet"></router-outlet>
+</div>
 <app-messages></app-messages>
