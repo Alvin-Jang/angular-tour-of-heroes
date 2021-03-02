@@ -1,10 +1,24 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
+
+import { HeroListComponent } from "./heroes/hero-list.component";
+import { HeroDetailComponent } from "./hero-detail/hero-detail.component";
+
+const heroesRoutes: Routes = [
+  {
+    path: "heroes",
+    component: HeroListComponent,
+    data: { animation: "heroes" }
+  },
+  {
+    path: "hero/:id",
+    component: HeroDetailComponent,
+    data: { animation: "hero" }
+  }
+];
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
-  declarations: []
+  imports: [RouterModule.forRoot(heroesRoutes)],
+  exports: [RouterModule]
 })
-export class HeroesRoutingModule { }
+export class HeroesRoutingModule {}
