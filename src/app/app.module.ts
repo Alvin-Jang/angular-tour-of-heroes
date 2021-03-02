@@ -15,6 +15,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CrisisListComponent } from './crisis-list/crisis-list.component';
 
 @NgModule({
   imports: [
@@ -39,7 +40,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MessagesComponent,
     DashboardComponent,
     HeroSearchComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CrisisListComponent
   ],
   bootstrap: [AppComponent],
   providers: [HeroService, MessageService, InMemoryDataService]
