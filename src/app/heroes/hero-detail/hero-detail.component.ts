@@ -13,7 +13,7 @@ import { switchMap } from "rxjs/operators";
   styleUrls: ["./hero-detail.component.css"]
 })
 export class HeroDetailComponent implements OnInit {
-  hero$: Observable<Hero>;
+  hero: Hero;
 
   constructor(
     private route: ActivatedRoute,
@@ -26,19 +26,18 @@ export class HeroDetailComponent implements OnInit {
   }
 
   getHero(): void {
-    this.hero$ = this.route.paramMap.pipe(
-      switchMap((params: ParamMap) =>
-        this.heroService.getHero(params.get("id"))
-      )
-    );
+    // this.hero$ = this.route.paramMap.pipe(
+    //   switchMap((params: ParamMap) =>
+    //     this.heroService.getHero(params.get("id"))
+    //   )
+    // );
 
-    // const id = +this.route.snapshot.paramMap.get("id");
-    // this.heroService.getHero(id).subscribe(hero => (this.hero = hero));
+    const id = +this.route.snapshot.paramMap.get("id");
+    this.heroService.getHero(id).subscribe(hero => (this.hero = hero));
   }
 
-  goBack(hero: Hero): void {
-    //this.location.back();
-    const heroId = hero ? hero.id :
+  goBack(): void {
+    this.location.back();
   }
 
   save(): void {
