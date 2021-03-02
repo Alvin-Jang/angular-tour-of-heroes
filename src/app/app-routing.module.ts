@@ -4,7 +4,7 @@ import { AppComponent } from "./app.component";
 import { CrisisListComponent } from "./crisis-list/crisis-list.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { HeroDetailComponent } from "./hero-detail/hero-detail.component";
-import { HeroesComponent } from "./heroes/heroes.component";
+import { HeroesComponent } from "./heroes/heroes/heroes.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 
 const routes: Routes = [
