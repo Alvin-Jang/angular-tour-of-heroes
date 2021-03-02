@@ -1,4 +1,7 @@
-import { Component, OnInit } from "@angular/core";
+import { DOCUMENT } from "@angular/common";
+import { Component, Inject, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+
 import { MessageService } from "../message.service";
 
 @Component({
@@ -7,9 +10,10 @@ import { MessageService } from "../message.service";
   styleUrls: ["./page-not-found.component.css"]
 })
 export class PageNotFoundComponent implements OnInit {
-  constructor(private messageService: MessageService) {}
+  constructor(private messageService: MessageService, private route: Router) {}
 
   ngOnInit() {
-    this.messageService.add("Page not found!");
+    const url = this.route.url;
+    this.messageService.add(`Page not found! Url: ${url}`);
   }
 }
