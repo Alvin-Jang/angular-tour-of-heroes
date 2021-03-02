@@ -8,11 +8,11 @@ import { HeroesComponent } from "./heroes/heroes.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 
 const routes: Routes = [
-  { path: "", redirectTo: "/dashboard", pathMatch: "full" },
   { path: "heroes", component: HeroesComponent },
   { path: "dashboard", component: DashboardComponent },
   { path: "detail/:id", component: HeroDetailComponent },
   { path: "crisis-center", component: CrisisListComponent },
+  { path: "", redirectTo: "/dashboard", pathMatch: "full" },
   { path: "**", component: PageNotFoundComponent }
 ];
 
