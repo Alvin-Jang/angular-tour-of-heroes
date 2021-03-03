@@ -12,8 +12,13 @@ export class HeroFormComponent {
   model = new Hero(21, "Dr Zhang", this.powers[0], "Chunk Overstreet");
 
   submitted = false;
+
   onSubmit() {
     this.submitted = true;
+  }
+
+  newHero() {
+    this.model = new Hero(42, "", "", "");
   }
 
   //TODO: Remove this when we're done

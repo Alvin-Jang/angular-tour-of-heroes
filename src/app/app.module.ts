@@ -18,6 +18,7 @@ import { HeroDetailComponent } from "./heroes/hero-detail/hero-detail.component"
 import { HeroListComponent } from "./heroes/heroes/hero-list.component";
 import { HeroSearchComponent } from "./hero-search/hero-search.component";
 import { HeroService } from "./heroes/hero.service";
+import { HeroFormComponent } from "./heroes/hero-form/hero-form.component";
 
 @NgModule({
   imports: [
@@ -44,7 +45,8 @@ import { HeroService } from "./heroes/hero.service";
     DashboardComponent,
     HeroSearchComponent,
     PageNotFoundComponent,
-    CrisisListComponent
+    CrisisListComponent,
+    HeroFormComponent
   ],
   bootstrap: [AppComponent],
   providers: [HeroService, MessageService, InMemoryDataService]
