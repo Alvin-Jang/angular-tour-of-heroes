@@ -2,6 +2,10 @@
   max-width: 300px;
 }
 
+#search-component {
+  clear: left;
+}
+
 .search-result {
   margin-top: 0;
   padding-left: 0;

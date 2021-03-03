@@ -1,13 +1,15 @@
 <h3>HEROES</h3>
 
-<div *ngIf="hero">
+<div class="container hero-detail" *ngIf="hero">
   <h4>"{{hero.name | uppercase}}"</h4>
   <div><label>id: {{hero.id}}</label></div>
   <div>
-    <label>name: <input class="form-control " [(ngModel)]="hero.name" placeholder="name"
+    <label
+      >name:
+      <input class="form-control" [(ngModel)]="hero.name" placeholder="name"
     /></label>
   </div>
-  <button class="btn btn-default" (click)="goBack()">Go Back</button>
+  <button class="btn btn-warning" (click)="goBack()">Go Back</button>
   &nbsp;
   <button class="btn btn-info" (click)="save()">Save</button>
 </div>

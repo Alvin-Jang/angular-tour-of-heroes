@@ -1,3 +1,7 @@
-.none-float {
-  float: none;
+.hero-detail {
+  width: 100%;
+}
+
+input {
+  clear: left;
 }

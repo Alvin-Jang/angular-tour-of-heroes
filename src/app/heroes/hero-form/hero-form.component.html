@@ -12,6 +12,7 @@
           [(ngModel)]="model.name"
           name="name"
           #name="ngModel"
+          placeholder="Name"
         />
         <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
           Name is required
@@ -26,6 +27,7 @@
           id="alterEgo"
           [(ngModel)]="model.alterEgo"
           name="alterEgo"
+          placeholder="Alter Ego"
         />
       </div>
 
@@ -59,7 +61,7 @@
       &nbsp;
       <button
         type="button"
-        class="btn btn-default"
+        class="btn btn-info"
         (click)="newHero(); heroForm.reset()"
       >
         New Hero
