@@ -1,7 +1,27 @@
-/* HeroSearch private styles .search-result li {
-  width: 184px;
-  height: 12px;
-  padding: 10px;
+.search-box {
+  width: 250px;
+}
+
+.search-result {
+  margin-top: 0;
+  padding-left: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 4px;
+  width: 250px;
+  box-shadow: rgb(219, 219, 219) 0px 2px 2px 3px;
+}
+
+.search-result ul {
+  margin-top: 0;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.search-result li {
+  width: 250px;
+  height: 34px;
+  padding: 6px 12px;
   background-color: white;
   cursor: pointer;
   list-style-type: none;
@@ -14,34 +34,14 @@
 }
 
 .search-result li a {
-  color: black;
+  color: rgb(92, 92, 92);
   display: block;
   text-decoration: none;
 }
 
 .search-result li a:hover {
-  color: black;
+  color: rgb(92, 92, 92);
 }
 .search-result li a:active {
-  color: black;
+  color: rgb(92, 92, 92);
 }
-#search-box {
-  width: 200px;
-  height: 20px;
-}
-
-.search-result {
-  margin-top: 0;
-  padding-left: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 4px;
-  width: 204px;
-  box-shadow: rgb(219, 219, 219) 0px 2px 2px 3px;
-}
-
-.search-result ul {
-  margin-top: 0;
-  padding-left: 0;
-  margin-bottom: 0;
-} */
