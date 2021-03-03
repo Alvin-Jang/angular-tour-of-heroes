@@ -1,14 +1,13 @@
-<h1>{{title}}</h1>
+<h2>{{title}}</h2>
+
 <nav>
-  <a routerLink="/dashboard">Dashboard</a>
-  &nbsp;
-  <a routerLink="/crisis-center">Crisis Center</a>
-  &nbsp;
-  <a routerLink="/heroes">Heroes</a>
-  &nbsp;
-  <a routerLink="/hero-form">Add Hero</a>
-  &nbsp;
-  <a routerLink="/sidekicks">Go to sidekicks</a>
+  <ul class="nav nav-tabs">
+    <li><a routerLink="/dashboard">Dashboard</a></li>
+    <li><a routerLink="/crisis-center">Crisis Center</a></li>
+    <li><a routerLink="/heroes">Heroes</a></li>
+    <li><a routerLink="/hero-form">Add Hero</a></li>
+    <li><a routerLink="/sidekicks">Go to sidekicks</a></li>
+  </ul>
 </nav>
 
 <div [@routeAnimation]="getAnimationData(routerOutlet)">
