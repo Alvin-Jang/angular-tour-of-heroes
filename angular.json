@@ -24,7 +24,7 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/assets/forms.css"
+              "src/app/assets/forms.css"
             ],
             "scripts": []
           },
@@ -74,7 +74,7 @@
             "karmaConfig": "src/karma.conf.js",
             "styles": [
               "styles.css",
-              "assets/forms.css"
+              "app/assets/forms.css"
             ],
             "scripts": [],
             "assets": [
