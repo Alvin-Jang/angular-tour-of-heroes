@@ -18,7 +18,9 @@ export class HeroListComponent implements OnInit {
   }
 
   getHeroes(): void {
-    this.heroService.getHeroes().subscribe(heroes => (this.heroes = heroes));
+    this.heroService
+      .getHeroes(false)
+      .subscribe(heroes => (this.heroes = heroes));
   }
 
   add(name: string): void {

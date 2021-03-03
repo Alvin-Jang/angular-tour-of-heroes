@@ -23,9 +23,9 @@ export class HeroService {
   ) {}
 
   /** GET heroes from the server */
-  getHeroes(): Observable<Hero[]> {
+  getHeroes(suppressLog: boolean): Observable<Hero[]> {
     return this.http.get<Hero[]>(this.heroesUrl).pipe(
-      tap(_ => this.log("fetched heroes")),
+      tap(_ => (!suppressLog ? this.log("fetched heroes") : null)),
       catchError(this.handleError<Hero[]>("getHeroes", []))
     );
   }
@@ -50,8 +50,12 @@ export class HeroService {
     //   tap(_ => this.log(`fetched hero id=${id}`)),
     //   catchError(this.handleError<Hero>(`getHero id=${id}`))
     // );
-    return this.getHeroes().pipe(
-      map((heroes: Hero[]) => heroes.find(hero => hero.id === +id))
+    return this.getHeroes(true).pipe(
+      map((heroes: Hero[]) => heroes.find(hero => hero.id === +id)),
+      tap(t => {
+        const outcome = t ? "fetched" : "did not find";
+        this.log(`${outcome} hero id=${id}`);
+      })
     );
   }
 
@@ -116,7 +120,7 @@ export class HeroService {
     };
   }
 
-  private log(message: string) {
+  public log(message: string) {
     this.messageService.add(`HeroService: ${message}`);
   }
 }
