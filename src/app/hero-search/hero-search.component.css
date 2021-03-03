@@ -1,5 +1,5 @@
 .search-box {
-  width: 250px;
+  max-width: 300px;
 }
 
 .search-result {
@@ -8,7 +8,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 4px;
-  width: 250px;
+  max-width: 300px;
   box-shadow: rgb(219, 219, 219) 0px 2px 2px 3px;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .search-result li {
-  width: 250px;
+  max-width: 3000px;
   height: 34px;
   padding: 6px 12px;
   background-color: white;
